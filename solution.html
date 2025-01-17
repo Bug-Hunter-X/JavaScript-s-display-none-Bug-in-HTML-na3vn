@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+<style>
+  #myDiv {
+    display: none; /* Set display: none in CSS, not JavaScript */
+  }
+</style>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially, then shown.
+  </div>
+
+  <script>
+    // Solution: Use CSS to initially hide the element
+    // Then use JavaScript to show it after a delay.
+    setTimeout(function() {
+      document.getElementById("myDiv").style.display = "block";
+    }, 3000);
+  </script>
+</body>
+</html>
