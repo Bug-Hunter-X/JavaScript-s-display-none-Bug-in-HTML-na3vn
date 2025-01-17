@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+
+  <script>
+    // Bug: Incorrect use of display: none in JavaScript
+    document.getElementById("myDiv").style.display = "none"; 
+    // The problem is that setting display:none prevents any further JavaScript manipulation of the element's style.
+
+    // Trying to show the div after setting display:none
+    setTimeout(function(){
+        document.getElementById("myDiv").style.display = "block";
+    }, 3000);
+  </script>
+</body>
+</html>
